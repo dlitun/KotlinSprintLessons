@@ -5,7 +5,6 @@ fun main() {
 
     val (from, to, moveNumber) = moveString.split("-", ";")
 
-    println("$from-$to;$moveNumber")
     println("Откуда: $from")
     println("Куда: $to")
     println("Номер хода: $moveNumber")
