@@ -1,19 +1,19 @@
 package lesson4
 
-const val REQUIRED_HUMIDITY: Int = 20
-const val REQUIRED_SEASON: String = "зима"
-const val IS_SUNNY: Boolean = true
-const val IS_TENT_OPEN: Boolean = true
+const val REQUIRED_HUMIDITY = 20
+const val WINTER_SEASON = "зима"
 
 fun main() {
-    val humidity: Int = 20
-    val season: String = "зима"
+    val isSunny = true
+    val isTentOpen = true
+    val humidity = 20
+    val season = "зима"
 
     val areConditionsFavorable =
-        IS_SUNNY == true &&
-                IS_TENT_OPEN == true &&
-                humidity == REQUIRED_HUMIDITY &&
-                season != REQUIRED_SEASON
+        isSunny &&
+        isTentOpen &&
+        humidity == REQUIRED_HUMIDITY &&
+        season != WINTER_SEASON
 
     println("Благоприятные ли условия сейчас для роста бобовых? $areConditionsFavorable")
 }
