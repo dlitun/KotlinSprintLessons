@@ -11,18 +11,19 @@ fun main() {
 
     println("Авторизация")
 
-    while (true) {
+    do {
         print("Введите логин: ")
         val login = readln()
 
         print("Введите пароль: ")
         val password = readln()
 
-        if (login == registeredLogin && password == registeredPassword) {
+        val isAuthorized = login == registeredLogin && password == registeredPassword
+
+        if (isAuthorized) {
             println("Авторизация прошла успешно")
-            break
         } else {
             println("Неверный логин или пароль. Попробуйте снова.")
         }
-    }
+    } while (!isAuthorized)
 }
