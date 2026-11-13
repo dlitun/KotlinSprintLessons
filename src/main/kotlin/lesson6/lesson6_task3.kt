@@ -6,11 +6,8 @@ fun main() {
 
     do {
         println("Осталось секунд: $counter")
-
-        if (counter > 0) {
-            Thread.sleep(ONE_SECOND_MS)
-            counter--
-        }
+        Thread.sleep(1000)
+        counter--
     } while (counter > 0)
 
     println("Время вышло")
