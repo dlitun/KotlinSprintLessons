@@ -1,17 +1,19 @@
 package lesson7
 
+const val MIN_PASSWORD_LENGTH = 6
+
 fun main() {
-    print("Введите длину пароля (минимум 6): ")
+    print("Введите длину пароля (минимум $MIN_PASSWORD_LENGTH): ")
     val length = readln().toInt()
 
-    if (length < 6) {
-        println("Пароль должен быть не короче 6 символов")
+    if (length < MIN_PASSWORD_LENGTH) {
+        println("Пароль должен быть не короче $MIN_PASSWORD_LENGTH символов")
         return
     }
 
-    val digits = ('0'..'9')
-    val lowers = ('a'..'z')
-    val uppers = ('A'..'Z')
+    val digits = '0'..'9'
+    val lowers = 'a'..'z'
+    val uppers = 'A'..'Z'
 
     val allChars = digits + lowers + uppers
 
