@@ -6,7 +6,7 @@ fun main() {
     for (i in 1..5) {
         print("Введите ингредиент №$i: ")
         val input = readln()
-        ingredients.add(input.lowercase())
+        ingredients.add(input.trim().lowercase())
     }
 
     val result = ingredients
